@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework number 2:</title>
+</head>
+<body>
+    <script>
+        questionToUser = prompt('Well!Do you want to know what you have to do according to your mark ?');
+        if (questionToUser == 'yes') {
+            let userMark = parseInt(prompt('Ok, so what is your mark?'))
+            switch (userMark) {
+                case 1:
+                    alert('U have to start wokring harder');
+                    break;
+                case 2:
+                    alert('U need to work hard');
+                    break;
+                case 3:
+                    alert('make a little more effort');
+                    break;
+                case 4:
+                    alert('work is good');
+                    break;
+                case 5:
+                    alert('well done');
+                    break;
+                default:
+                    alert('we have no such mark');
+            }
+        }
+        else if (questionToUser == 'no'){
+            alert('Ok!That is your choise.Goodbye, bruuh!')
+        }
+        
+    </script>
+</body>
+</html>

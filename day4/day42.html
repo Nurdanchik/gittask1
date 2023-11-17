@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="myFunction(1)">Turn off the light</button>
+
+<img id="myImage" src="pic_bulboff.gif">
+
+<button onclick="myFunction(0)">Turn on the light</button>
+    
+<script>
+    function myFunction(sw){
+        let picPath;
+        switch(sw) {
+            case 1:
+                picPath = 'pic_bulboff.gif'
+                break;
+            case 0:
+                picPath = 'pic_bulbon.gif'
+                break;
+        }
+        document.getElementById('myImage').src = picPath;
+    }
+</script>
+</body>
+</html>

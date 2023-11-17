@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userChoice = parseInt(prompt('Enter what do you want to know (1 or 2): '))
+        if (userChoice=='1') {
+            let studentName = prompt('Enter who do you want to know: ');
+        switch(studentName) {
+            case 'Ali':
+                alert('Basketball player.');
+                break;
+            case 'Samat':
+                alert('Boxer');
+                break;
+            case 'Nurdan':
+                alert('Black boy.');
+                break;
+            default:
+                alert("I do not know this one.")
+        }}
+        else if (userChoice=='2') {
+            let number1 = parseInt(prompt('Enter the first number'))
+            let number2 = parseInt(prompt('Enter the second number'))
+            if (number1>number2) {
+                alert(`${number1} is greater than ${number2}`)
+            }
+            else if (number1<number2) {
+                alert(`${number2} is greater than ${number1}`)
+            }
+            else {
+                alert((`${number1} is equal to ${number2}`))
+            }
+        }
+    </script>
+</body>
+</html>

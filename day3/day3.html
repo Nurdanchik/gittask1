@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realization of function</title>
+    <style>
+        .main {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(banner.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 10px 70px 0 70px;
+        }
+        .container {
+            display: grid;
+            align-items: center;
+            gap: 30px;
+        }
+        button{
+            width: 180px;
+            color: #000;
+            font-size: 12px;
+            padding: 12px 0;
+            background: #fff;
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 30px;
+            justify-self: center;
+        }
+        .card{
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-image: url(banner.jpg) ;
+            background-position: center;
+            background-size: cover;
+            transition: 0.5s;
+            color: aliceblue;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: auto auto;
+            transition: 0.5s;
+            justify-content: center;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .panel {
+            transition: 0.5s;
+        }
+        .panel:hover {
+            transform: translateY(-10px);
+        }
+        body {
+            background: #000405;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 900;
+          }
+          
+          .fansy {
+            font-size: 8vw;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1;
+          }
+          
+          .fancy {
+            position: relative;
+            white-space: nowrap;
+            &:after {
+              --deco-height: 0.3125em;
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: calc(var(--deco-height) * -0.625);
+              height: var(--deco-height);
+              background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2300FDCF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+              background-size: auto 100%;
+              background-repeat: round;
+              background-position: 0em;
+            }
+          }
+          #answa {
+            text-align: center;
+            color: aliceblue;
+          }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <p class="fansy">Wanna know your Porsche <span class="fancy">taste?</span></p>
+            <button onclick="myFunction()"> Press this</button>
+            <h3 id="answa"></h3>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Read this!</h3>
+                <p>Good luck,brother ! Wish you everything good!</p>
+            </div>
+            <div class="card">
+                <h3>Read this twice!</h3>
+                <p>Good luck,brother ! Wish you everything good!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            let text;
+            let favPorsche = prompt('Enter what is your favourite porsche: ');
+            switch(favPorsche) {
+                case 'Porsche cayen':
+                    answer = 'Cayen is not bad.';
+                    break;
+                case 'Porsche 992':
+                    answer = '992 is not bad.';
+                    break;
+                case 'Porsche 918 spyder s':
+                    answer = '918 spyder s is not goated.';
+                    break;
+                case 'Porsche 911 GT3 RS':
+                    answer = 'Good taste!';
+                    break;
+                case 'Porsche 911 turbo s':
+                    answer = '911 turbo s is goat.';
+                    break;
+                default:
+                    answer = "I do not know this one."
+            }
+            document.getElementById('answa').innerHTML = answer;
+        }
+    </script>
+</body>
+</html>
